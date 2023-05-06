@@ -48,7 +48,7 @@ app.use(
       maxAge: 24 * 60 * 60 * 100,
       secret:'fdsfsdfsdfd',
       sameSite:'none',
-      secure:true
+    
     })
   );
   
