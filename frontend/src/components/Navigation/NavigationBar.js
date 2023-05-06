@@ -2,6 +2,7 @@ import { isAsyncThunkAction } from "@reduxjs/toolkit";
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
+import { backendUrl } from "../../backendUrl";
 const NavigationBar = () => {
   const { user, isAuth } = useSelector((state) => state.auth);
   return (
@@ -14,7 +15,7 @@ const NavigationBar = () => {
       </div>
       <div className="flex gap-6 menu">
       { isAuth &&
-        <a href="/appliedJobs">
+        <a href={`${backendUrl}/appliedJobs`}>
           {" "}
           <li className="menulist text-[#6f6f6f] hover:text-blue-500">
            Applied Jobs
@@ -37,7 +38,7 @@ const NavigationBar = () => {
           </li>
         </a>
         {!isAuth && (
-          <a href="/login">
+          <a href={`${backendUrl}/login`}>
             {" "}
             <li className="menulist text-[#6f6f6f] hover:text-blue-500">
               Login
@@ -45,7 +46,7 @@ const NavigationBar = () => {
           </a>
         )}
         {!isAuth && (
-          <a href="/register">
+          <a href={`${backendUrl}/register`}>
             {" "}
             <li className="menulist text-[#6f6f6f] hover:text-blue-500">
               Register
