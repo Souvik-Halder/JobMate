@@ -39,7 +39,7 @@ function App() {
             </ProtectedRoute>
         }/>}
 
-        <Route path='/' exact element={<Home/>}/>
+        <Route path='/jobs'  element={<Home/>}/>
         <Route path='/login' element={
           <GuestRoute>
             <SignIn/>

@@ -8,10 +8,10 @@ const NavigationBar = () => {
   return (
     <div className="navBar flex justify-between items-center p-[3rem]">
       <div className="logoDiv">
-        <a to="/" className="logo cursor-pointer text-[25px] text-blue-500">
+        <Link to="jobs/" className="logo cursor-pointer text-[25px] text-blue-500">
           {" "}
           Job <strong>Mate</strong>
-        </a>
+        </Link>
       </div>
       <div className="flex gap-6 menu">
       { isAuth &&
@@ -21,10 +21,10 @@ const NavigationBar = () => {
            Applied Jobs
           </li>{" "}
         </Link>}
-       <Link to="/companies">
+       <Link to="/jobs">
           {" "}
           <li className="menulist text-[#6f6f6f] hover:text-blue-500">
-            Companies
+            Home
           </li>
         </Link>
        <Link to="/about">
