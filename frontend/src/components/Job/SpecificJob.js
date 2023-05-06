@@ -14,11 +14,10 @@ const SpecificJob = () => {
     useEffect(()=>{
     async function  fetchSpecificJobDetails(){
       const {data}=await specificJobDetails(specificJobId)
-      setSpecificJob(data.specificJob
-);
+      setSpecificJob(data.specificJob);
     }
     fetchSpecificJobDetails();
-    },[])
+    },[specificJobId])
   return (
     <div>
   {
