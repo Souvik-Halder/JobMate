@@ -1,1 +1,1 @@
-export const    backendUrl="http://localhost:4000/api/v1"
+export const    backendUrl="https://jobmate-app-api.onrender.com"

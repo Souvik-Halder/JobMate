@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { register } from '../../https';
+import { backendUrl } from '../../backendUrl';
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -82,7 +83,7 @@ const SignUp = () => {
              
                 <li className="w-full px-2">
                   <Link
-                 to={'http://localhost:4000/api/v1/google'}
+                 to={`${backendUrl}/api/v1/google/callback`}
                     className="flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90"
                   >
                     <svg
