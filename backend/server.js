@@ -58,7 +58,7 @@ app.use(
   app.use(cookieParser());
   const corsOptions={
     
-      origin: "http://localhost:3000",
+      origin: ["http://localhost:3000","https://jobmate-app.onrender.com"],
       methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       preflightContinue: false,
       credentials:true,
