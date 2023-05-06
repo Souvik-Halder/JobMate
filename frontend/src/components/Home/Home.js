@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     async function fetchJobs(){
       const {data}=await allJobs();
-     
+     console.log(data)
       setJob(data.allJob)
     }
    fetchJobs()
