@@ -9,11 +9,14 @@ import Search from './components/searchDiv/Search';
 import JobPostForm from './components/Forms/JobPostForm';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import axios from 'axios';
 import { loadUser } from './https';
 import { setAuth } from './slice/authSlice';
 import SpecificJob from './components/Job/SpecificJob';
 import SubmitJobApplication from './components/Job/SubmitJobApplication';
 import AppliedJobs from './components/Job/AppliedJobs';
+axios.defaults.withCredentials=true
+
 function App() {
   const {isAuth}=useSelector(state=>state.auth)
   const dispatch=useDispatch()
@@ -39,7 +42,7 @@ function App() {
             </ProtectedRoute>
         }/>}
 
-        <Route path='/jobs'  element={<Home/>}/>
+        <Route path='/' exact  element={<Home/>}/>
         <Route path='/login' element={
           <GuestRoute>
             <SignIn/>

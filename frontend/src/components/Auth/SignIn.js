@@ -70,7 +70,7 @@ const SignIn = () => {
         
             <li className="w-full px-2">
               <Link
-              to={`${backendUrl}/google`}
+              to={`${backendUrl}/api/v1/google`}
                 className="flex h-11 cursor-pointer items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90"
               >
                 <svg

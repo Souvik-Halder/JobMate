@@ -63,10 +63,12 @@ app.use(
       methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       preflightContinue: false,
       credentials:true,
-      credentials: true, 
+   
       optionSuccessStatus: 200,
       Headers: true,
       exposedHeaders: 'Set-Cookie',
+      httpOnly:true,
+      sameSite:'none',
       methods: ['GET', 'PUT', 'POST', 'DELETE', 'OPTIONS'],
       allowedHeaders: [
         'Access-Control-Allow-Origin',

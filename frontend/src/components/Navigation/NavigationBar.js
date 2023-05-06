@@ -21,7 +21,7 @@ const NavigationBar = () => {
            Applied Jobs
           </li>{" "}
         </Link>}
-       <Link to="/jobs">
+       <Link to="/">
           {" "}
           <li className="menulist text-[#6f6f6f] hover:text-blue-500">
             Home
