@@ -64,8 +64,14 @@ app.use(
       methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       preflightContinue: false,
       credentials:true,
-   
-     
+      Headers: true,
+      exposedHeaders: 'Set-Cookie',
+      methods: ['GET', 'PUT', 'POST', 'DELETE', 'OPTIONS'],
+      allowedHeaders: [
+        'Access-Control-Allow-Origin',
+        'Content-Type',
+        'Authorization'
+      ]
     
   }
 app.use(cors(corsOptions))
