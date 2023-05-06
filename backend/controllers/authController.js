@@ -8,6 +8,29 @@ exports.workingfine = async (req, res, next) => {
 };
 const UserModel = require("../models/user");
 
+
+//logout user
+exports.logoutUser = async (req, res, next) => {
+  req.logout(function (err) {
+      if (err) { next(new ErroHandler("Error Occured" + err.message, 400)) }
+  });
+  if (req.user) {
+
+      res.status(200).json({
+          success: false,
+          user: req.user,
+          message: "Failure occured during Logging Out"
+      })
+  }
+  else {
+      res.status(200).json({
+          success: true,
+          message: "Logged Out successfully",
+          user:null
+      })
+  }
+}
+
 //Google Login Starts here
 exports.userGoogleLogin = passport.authenticate("google", {
   successRedirect: process.env.CLIENT_URL,

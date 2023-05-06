@@ -46,7 +46,7 @@ app.use(
       name: 'session',
       keys: ['profile', 'email'],
       maxAge: 24 * 60 * 60 * 100,
-      secret:true
+      
     })
   );
   
@@ -64,17 +64,7 @@ app.use(
       preflightContinue: false,
       credentials:true,
    
-      optionSuccessStatus: 200,
-      Headers: true,
-      exposedHeaders: 'Set-Cookie',
-      httpOnly:true,
-      sameSite:'none',
-      methods: ['GET', 'PUT', 'POST', 'DELETE', 'OPTIONS'],
-      allowedHeaders: [
-        'Access-Control-Allow-Origin',
-        'Content-Type',
-        'Authorization'
-      ]
+     
     
   }
 app.use(cors(corsOptions))

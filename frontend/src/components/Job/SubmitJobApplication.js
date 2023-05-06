@@ -55,7 +55,7 @@ const [institute, setInstitute] = useState('');
     <div>
       <div className=" ">
         <h1 className=" text-center my-8 font-bold text-[40px]">
-          Post your Job Here
+          Submit Your Application
         </h1>
         <div className="bg-gray-600 rounded-[36px] w-[60%] mx-auto ">
           <div class="w-[70%] py-16  mx-auto">

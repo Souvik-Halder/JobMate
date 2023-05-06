@@ -24,6 +24,7 @@ export const loadUser=async ()=>api.get('/login-success');
 export const specificJobDetails=async(specificJobId)=>api.get(`/specificJob/${specificJobId}`)
 export const submitApplication=async(formData,jobId,companyId)=>api.post(`${REACT_APP_API_URL}/jobapplication/${jobId}/${companyId}`,formData)
 export const myApplicationDetails=async()=>api.get(`/myApplication`)
+export const logout=async()=>api.post('/logout')
 
 
 

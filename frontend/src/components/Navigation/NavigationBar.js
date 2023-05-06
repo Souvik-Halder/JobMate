@@ -1,9 +1,20 @@
 import { isAsyncThunkAction } from "@reduxjs/toolkit";
 import React from "react";
-import { useSelector } from "react-redux";
-import { Link, Navigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { backendUrl, fronendUrl } from "../../backendUrl";
+import { logout } from "../../https";
+import {setAuth} from '../../slice/authSlice'
 const NavigationBar = () => {
+  const dispatch=useDispatch();
+  const navigate=useNavigate()
+  async function logoutuser(){
+    const {data}=await logout();
+  
+    dispatch(setAuth({user:null}))
+    navigate('/')
+    
+  }
   const { user, isAuth } = useSelector((state) => state.auth);
   return (
     <div className="navBar flex justify-between items-center p-[3rem]">
@@ -54,12 +65,12 @@ const NavigationBar = () => {
           </Link>
         )}
         {isAuth && (
-         <Link to="/logout">
+         <button onClick={logoutuser}>
             {" "}
             <li className="menulist text-[#6f6f6f] hover:text-blue-500">
               Logout
             </li>
-          </Link>
+          </button>
         )}
       </div>
     </div>
