@@ -27,9 +27,10 @@ function App() {
   return (
     <>
     <div className='w-[85%] h-[2000px] mx-auto bg-white'>
-    <NavigationBar/>
+   
  
     <Router>
+    <NavigationBar/>
       <Routes>
         <Route path='/specificJob/:specificJobId' element={<SpecificJob/>}/>
        { isAuth && <Route path='/appliedJobs' element={
