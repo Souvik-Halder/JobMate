@@ -46,7 +46,9 @@ app.use(
       name: 'session',
       keys: ['profile', 'email'],
       maxAge: 24 * 60 * 60 * 100,
-      secret:true
+      secret:true,
+       httpOnly:true,
+      sameSite:'none',
     })
   );
   
